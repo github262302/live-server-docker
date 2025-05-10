@@ -1,7 +1,6 @@
-FROM node:18
+FROM node:18-slim
 
-# 安装 live-server
-RUN npm install -g live-server
+RUN npm install -g live-server && npm cache clean --force
 
 # 设置默认工作目录（可选）
 WORKDIR /home
