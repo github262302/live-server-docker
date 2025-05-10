@@ -35,7 +35,7 @@ jobs:
         context: . # optional
         # Path to the Dockerfile
         file: Dockerfile # optional
-        platforms: linux/arm64
+        platforms: linux/amd64
         push: true # optional, default is false
         
         tags: iosjkfivzn1231/live-server-docker:${{ steps.vars.outputs.TAG }} # optional
