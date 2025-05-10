@@ -12,6 +12,10 @@ jobs:
     environment: DOCKER_USERNAME
     steps:
     - uses: actions/checkout@v4
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3.6.0
+      with:
+        platforms: arm64
     - uses: docker/login-action@v3.4.0
       with:
         # Server address of Docker registry. If not set then will default to Docker Hub
@@ -35,7 +39,7 @@ jobs:
         context: . # optional
         # Path to the Dockerfile
         file: Dockerfile # optional
-        platforms: linux/amd64
+        platforms: linux/arm64
         push: true # optional, default is false
         
         tags: iosjkfivzn1231/live-server-docker:${{ steps.vars.outputs.TAG }} # optional
