@@ -40,5 +40,5 @@ jobs:
         
         push: true # optional, default is false
         
-        tags: live-server-docker:${{ steps.vars.outputs.TAG }} # optional
+        tags: iosjkfivzn1231/live-server-docker:${{ steps.vars.outputs.TAG }} # optional
 
