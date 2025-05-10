@@ -1,4 +1,4 @@
-FROM node:16.20.2-slim
+FROM node:18.20.8-slim
 
 RUN npm install -g live-server
 RUN npm cache clean --force
