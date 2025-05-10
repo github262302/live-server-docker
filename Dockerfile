@@ -1,6 +1,7 @@
 FROM node:16.20.2
 
-RUN npm install -g live-server && npm cache clean --force
+RUN npm install -g live-server
+RUN npm cache clean --force
 
 # 设置默认工作目录（可选）
 WORKDIR /home
